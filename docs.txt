@@ -1,0 +1,64 @@
+- Tải xampp và đưa folder dự án vào file C:/xampp/htdocs
+
+- Mở folder dự án bằng vsCode
+
+- Cài composer
+
+- Chạy lệnh: composer install
+
+- Bật xampp: Start Apache và mySQL
+
+- Truy cập http://localhost/phpmyadmin/ trên browser
+
+- Import file star_global_test.sql để tạo database
+
+- Tải postman để test API -> Tạo collection và request trên postman:
+  +, Get groups(GET): http://localhost/screenTest/api/group/read.php
+  +, Get group by id(GET): http://localhost/screenTest/api/group/showOne.php?id=22
+  +, Create group(POST): http://localhost/screenTest/api/group/create.php
+    Body -> raw -> json: 
+    {
+      "group_name": "my group",
+      "title": "my title",
+      "content": "my content"
+    }
+  +, Update group by id(PUT): http://localhost/screenTest/api/group/update.php
+    Body -> raw -> json:
+    {
+      "group_name": "my group update 15",
+      "title": "my title123 update 15",
+      "content": "my content222222 update 15",
+      "id": 15
+    }
+  +, Delete by id(DELETE): http://localhost/screenTest/api/group/delete.php
+    Body -> raw -> json:
+    {
+      "id": 15
+    }
+  +, Get products(GET): http://localhost/screenTest/api/product/read.php
+  +, Get product by id(GET): http://localhost/screenTest/api/product/showOne.php?id=22
+  +, Create product(POST): http://localhost/screenTest/api/product/create.php
+    Body -> raw -> json: 
+    {
+      "product_name": "my product",
+      "group_id": 1
+    }
+  +, Update product by id(PUT): http://localhost/screenTest/api/product/update.php
+    Body -> raw -> json:
+    {
+      "product_name": "my product update 15",
+      "group_id": 1
+      "id": 1
+    }
+  +, Delete by id(DELETE): http://localhost/screenTest/api/product/delete.php
+    Body -> raw -> json:
+    {
+      "id": 1
+    }
+
+- Import/Export:
+  +, Group: http://localhost/screenTest/api/group/import.php
+            http://localhost/screenTest/api/group/export.php
+
+  +, Product: http://localhost/screenTest/api/product/import.php
+              http://localhost/screenTest/api/product/export.php
