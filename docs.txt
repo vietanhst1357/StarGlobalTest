@@ -1,5 +1,7 @@
 - Tải xampp và đưa folder dự án vào file C:/xampp/htdocs
 
+- Config apache xampp: config -> PHP(php.init) -> ctrl+F, gõ extension=zip -> Bỏ dấu ; ở đầu dòng -> restart apache
+
 - Mở folder dự án bằng vsCode
 
 - Cài composer
